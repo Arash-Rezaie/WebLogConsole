@@ -26,7 +26,7 @@ export class Console extends React.Component {
                         <AgGridColumn resizable={true} initialWidth={'70px%'} field="type"/>
                         <AgGridColumn resizable={true} initialWidth={'150px'} field="tag"/>
                         <AgGridColumn resizable={true} flex={1} field="log"
-                                      cellStyle={{overflowY: 'auto', whiteSpace: 'normal'}}/>
+                                      cellStyle={{overflowY: 'auto', whiteSpace: 'normal', userSelect: 'text'}}/>
                     </AgGridReact>
                 </div>
             </div>
