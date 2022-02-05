@@ -18,7 +18,7 @@ browser-auto-launch via command params.
 You have to send your log in json format to ``http://server-uri[localhost:8080]/broadcast``
 
 via GET or POST method. One log each time and log structure must be:
-``` json
+```
 {
     time:[log-time],
     type:[log-type: error,debug,...],
