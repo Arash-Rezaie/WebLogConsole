@@ -1,0 +1,119 @@
+html {
+    --color1: #a9a9a9;
+    --color2: #808380;
+    --color3: #636363;
+    --color4: #000000;
+    --color5: #e8ff91;
+}
+
+.none-selectable {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    -o-user-select: none;
+}
+
+.element {
+    border: 2px black solid;
+    border-radius: 5px;
+    background: var(--color2);
+}
+
+.root {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-rows: min-content 1fr;
+}
+
+.header {
+    width: 100%;
+    background: var(--color1);
+    border-bottom: 1px var(--color4) solid;
+}
+
+.header > * {
+    margin: 5px;
+    display: grid;
+    grid-template-columns: min-content min-content min-content max-content 1fr max-content;
+    gap: 5px;
+}
+
+.state-button {
+    display: grid;
+    padding: 2px;
+    grid-template-rows: 1fr min-content;
+    justify-items: center;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.none-selectable *,
+.state-button * {
+}
+
+.state-button:active {
+    background: var(--color3);
+}
+
+.state-button * {
+    width: 100%;
+    overflow-wrap: anywhere;
+}
+
+.input-button-component {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1px;
+    justify-content: center;
+}
+
+.input-button-component input {
+    width: 250px;
+}
+
+.input-field {
+    outline: none;
+    color: var(--color5);
+    padding: 4px;
+}
+
+.body-container {
+    display: grid;
+    line-grid: create;
+}
+
+.modal-disp {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #00000078;
+
+}
+
+.modal-disp .modal {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: var(--color3) solid 5px;
+    border-radius: 10px;
+    background: var(--color1);
+    min-width: 100px;
+    min-height: 100px;
+    padding: 5px;
+}
+
+code {
+    color: green;
+}
