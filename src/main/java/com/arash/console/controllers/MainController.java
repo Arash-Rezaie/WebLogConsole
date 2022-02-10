@@ -1,6 +1,5 @@
 package com.arash.console.controllers;
 
-import com.arash.console.config.Settings;
 import com.arash.console.socket.WsHandler;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

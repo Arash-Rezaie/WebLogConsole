@@ -1,6 +1,7 @@
 package com.arash.console.config;
 
 import java.util.HashMap;
+import java.util.List;
 
 public class Settings {
     private HashMap<String, Object> container = new HashMap<>();
@@ -13,19 +14,11 @@ public class Settings {
         return (int) container.getOrDefault("port", 8080);
     }
 
-    public void setCurrentUri(CurrentUri.MyUri myUri) {
-        container.put("currentUri", myUri);
+    public void setCurrentUri(List<String> currentUriList) {
+        container.put("currentUri", currentUriList);
     }
 
-    public CurrentUri.MyUri getCurrentUri() {
-        return (CurrentUri.MyUri) container.get("currentUri");
-    }
-
-    public void setAutoLaunchBrowser(boolean value) {
-        container.put("autoLaunchBrowser", value);
-    }
-
-    public boolean getAutoLaunchBrowser() {
-        return (boolean) container.getOrDefault("autoLaunchBrowser", true);
+    public List<String> getCurrentUri() {
+        return (List<String>) container.get("currentUri");
     }
 }
